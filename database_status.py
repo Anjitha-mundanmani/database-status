@@ -25,11 +25,12 @@ def Info_of_Database():
 	console.print(f"Max_used_connections, {r['Max_used_connections']}", style='bold blue')
 
 def Show_the_process_list():
-	cur.execute("select ID,DB from PROCESSLIST") 
+	cur.execute("select ID,DB,TIME from PROCESSLIST") 
 	res = cur.fetchall()
 	console.print(res)
 
 def Exit():
+	console.print("Successfully Exited",style="bold green")
 	exit()
 	
 def main_menu():
